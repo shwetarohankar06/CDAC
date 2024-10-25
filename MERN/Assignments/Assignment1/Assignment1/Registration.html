@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f2eaf1;
+            padding: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-image: url('background.png');
+            background-size: cover;
+            background-position: center;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #f3dceb;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        input:focus, select:focus {
+            border-color: #3498db;
+        }
+        .form-group-inline {
+            display: flex;
+            gap: 15px;
+        }
+        .form-group-inline .form-group {
+            flex: 1;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #2980b9;
+        }
+        .note {
+            font-size: 14px;
+            color: #888;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration form</h1>
+        <form id="student-registration-form">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group-inline">
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" required>
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" placeholder="Enter your address" required>
+            </div>
+            <div class="form-group-inline">
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" placeholder="Enter your city" required>
+                </div>
+                <div class="form-group">
+                    <label for="postalcode">Postal Code</label>
+                    <input type="text" id="postalcode" placeholder="Enter postal code" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="course">Course</label>
+                <select id="course" required>
+                    <option value="" disabled selected>Select Course</option>
+                    <option value="engineering">B.E</option>
+                    <option value="arts">Arts</option>
+                    <option value="science">Science</option>
+                    <option value="business">Commerce</option>
+                </select>
+            </div>
+            <button type="submit" class="submit-btn">Register Now</button>
+        </form>
+        <p class="note">By submitting this form, you agree to our terms and conditions.</p>
+    </div>
+</body>
+</html>

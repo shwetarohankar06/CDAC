@@ -1,0 +1,114 @@
+<html>
+<head>
+    <title>Sign Up</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #debccd, hsl(247, 69%, 77%));
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background: #e5d5e11a;
+            border-radius: 15px;
+            padding: 40px;
+            width: 400px;
+            box-shadow: 0 8px 32px 0 #0d0c0c5e;
+            border: 1px solid #f0eef92e;
+            position: relative;
+        }
+        .container::before {
+            top: -50px;
+            left: -50px;
+        }
+        .container::after {
+            bottom: -50px;
+            right: -50px;
+        }
+        .container h2 {
+            margin: 0 0 20px;
+            color: hsl(247, 24%, 93%);
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            background: rgba(226, 220, 224, 0.2);
+            color: #fff;
+            font-size: 16px;
+        }
+        .input-group input::placeholder {
+            color: #fff;
+        }
+        .btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            background: #000;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: hsl(202, 61%, 81%);
+        }
+        .login-link {
+            text-align: center;
+            margin: 20px 0;
+            color: #000;
+        }
+        .login-link a {
+            color: #000;
+            text-decoration: none;
+        }
+        .or {
+            text-align: center;
+            margin: 20px 0;
+            color: #000;
+        }
+        .social-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .social-buttons .btn {
+            width: 48%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            color: #000;
+            border: 1px solid #ddd;
+        }
+        .social-buttons .btn img {
+            margin-right: 10px;
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <div class="input-group">
+            <input type="text" placeholder="User Name">
+        </div>
+        <div class="input-group">
+            <input type="password" placeholder="Password">
+        </div>
+        <button class="btn">Sign Up</button>
+        <div class="login-link">
+            Already have an account? <a href="#">Create Account</a>
+        </div>
+        <div class="or">Or</div>
+    </div>
+</body>
+</html>

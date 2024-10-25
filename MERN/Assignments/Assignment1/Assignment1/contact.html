@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body, html {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+        }
+
+        .contact-container {
+            width: 400px;
+            padding: 2rem;
+            background: #fff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .contact-container h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group input, .input-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid transparent;
+            border-bottom: 2px solid #8fd3f4;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s;
+            font-size: 1rem;
+            color: #333;
+            resize: none;
+        }
+
+        .input-group input:focus, .input-group textarea:focus {
+            border-bottom-color: #84fab0;
+        }
+
+        .input-group label {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaa;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus + label,
+        .input-group input:not(:placeholder-shown) + label,
+        .input-group textarea:focus + label,
+        .input-group textarea:not(:placeholder-shown) + label {
+            top: -10px;
+            background-color: #fff;
+            padding: 0 5px;
+            color: #84fab0;
+            font-size: 0.8rem;
+        }
+
+        .contact-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #84fab0;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-button:hover {
+            background-color: #8fd3f4;
+        }
+
+        .contact-container p {
+            margin-top: 1.5rem;
+            color: #555;
+        }
+
+        .contact-container a {
+            color: #1a1f1c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <form>
+            <div class="input-group">
+                <input type="text" required placeholder=" " id="name">
+                <label for="name">Full Name</label>
+            </div>
+            <div class="input-group">
+                <input type="email" required placeholder=" " id="email">
+                <label for="email">Email</label>
+            </div>
+            <div class="input-group">
+                <textarea rows="4" required placeholder=" " id="message"></textarea>
+                <label for="message">Your Message</label>
+            </div>
+            <button type="submit" class="contact-button">Send Message</button>
+        </form>
+    </div>
+
+</body>
+</html>
