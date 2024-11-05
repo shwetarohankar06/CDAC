@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Fetch and Processing</title>
+</head>
+<body>
+    <script>
+        let errorMode = false;
+
+        function fetchData(url, callback) {
+            console.log(`Fetching data from ${url}...`);
+
+            setTimeout(() => {
+                if (errorMode) {
+                    callback(`Error fetching data from ${url}`, null);
+                } else {
+                    callback(null, `Response from ${url}`);
+                }
+                errorMode = !errorMode; 
+            }, 2000);
+        }
+
+        function processData(data, callback) {
+            console.log("Processing data...");
+            setTimeout(() => {
+                const processedData = `${data} - Processed`;
+                callback(processedData); 
+            }, 1000);
+        }
+        fetchData("www.google.com", (error, response) => {
+            if (error) {
+                console.error(error); 
+            } else {
+                processData(response, (processedData) => {
+                    console.log(processedData); 
+                });
+            }
+        });
+    </script>
+</body>
+</html>
